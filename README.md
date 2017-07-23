@@ -14,7 +14,7 @@ I will install locally on just about every system I use.
 
 ## Useage
 The provided module files assume that tools are locally installed in a directory
-structure that mirrors the layout and naming of modulefiles themselves. The
+structure that mirrors the layout and naming of the modulefiles themselves. The
 modulefiles project should be cloned into the top level of the directory
 structure. Therefore, the layout should looks like this:
 
@@ -46,7 +46,8 @@ structure. Therefore, the layout should looks like this:
        |-- etc.
 
 Once the directory structure is correct, simply add the modulefiles directory to
-the module search path and tell Tcl where to find the supporting utilities:
+the module search path and tell Tcl where to find the supporting utilities (I 
+recommend adding this to your .bashrc, .cshrc, etc.):
 
     >> module use --append $TOOL_HOME/modulefiles
     >> export TCLLIBPATH="$TOOL_HOME/__tcllib"
