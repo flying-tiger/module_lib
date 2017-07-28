@@ -50,7 +50,7 @@ the module search path and tell Tcl where to find the supporting utilities (I
 recommend adding this to your .bashrc, .cshrc, etc.):
 
     >> module use --append "$TOOL_HOME/modulefiles"
-    >> export TCLLIBPATH="$TOOL_HOME/__tcllib"
+    >> export TCLLIBPATH="$TOOL_HOME/modulefiles/__tcllib"
 
 It is not required to have software installed for all the modulefiles provided.
 If a tool directory is missing, an error message will be displayed when the user
