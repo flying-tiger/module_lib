@@ -1,6 +1,8 @@
 #%Module1.0
 module-whatis "Adds Gnuplot v5.0.5 to the environment"
 
+conflict gnuplot
+
 package require mod_utils 1.0
 set root [mod_utils::get_tool_path $ModulesCurrentModulefile]
 
