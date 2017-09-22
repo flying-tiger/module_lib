@@ -1,6 +1,7 @@
 #%Module1.0
 module-whatis "Adds Anaconda3 v4.3.1 to the environment"
 
+prereq   use.module_lib
 conflict anaconda
 conflict anaconda2
 conflict anaconda3

@@ -1,6 +1,7 @@
 #%Module1.0
 module-whatis "Adds CMake v3.4.0 to the environment"
 
+prereq   use.module_lib
 conflict cmake
 
 package require mod_utils 1.0
