@@ -1,0 +1,12 @@
+#%Module1.0
+module-whatis "Adds Miniconda3 v4.3.21 to the environment"
+
+conflict miniconda
+conflict miniconda2
+conflict miniconda3
+
+package require mod_utils 1.0
+set root [mod_utils::get_tool_path $ModulesCurrentModulefile]
+
+setenv         MINICONDA_ROOT  $root
+prepend-path   PATH $root/bin
