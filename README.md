@@ -1,4 +1,4 @@
-# modulefiles
+# module_lib
 A library of generic modulefiles for software I use
 
 ## Summary
@@ -20,7 +20,7 @@ structure. Therefore, the layout should looks like this:
 
     $TOOLS_HOME/
        |
-       |-- modulefiles/ # From github
+       |-- module_lib/ # From github
        |     |-- LICENSE
        |     |-- README.md
        |     |-- anaconda3/
@@ -46,11 +46,11 @@ structure. Therefore, the layout should looks like this:
        |-- etc.
 
 Once the directory structure is correct, simply add the modulefiles directory to
-the module search path and tell Tcl where to find the supporting utilities (I
-recommend adding this to your .bashrc, .cshrc, etc.):
+the module search path and load the bootstrap module (typically, you would add
+this to your .bashrc, .cshrc, etc.):
 
-    >> module use --append "$TOOL_HOME/modulefiles"
-    >> export TCLLIBPATH="$TOOL_HOME/__tcllib"
+    >> module use --append "$TOOL_HOME/module_lib"
+    >> module add use.module_lib
 
 It is not required to have software installed for all the modulefiles provided.
 If a tool directory is missing, an error message will be displayed when the user
