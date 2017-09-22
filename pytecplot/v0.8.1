@@ -1,0 +1,20 @@
+#%Module
+module-whatis "Add pytecplot v0.8.1 to the environment"
+
+prereq   use.module_lib
+conflict pytecplot
+
+package require mod_utils 1.0
+set root [mod_utils::get_tool_path $ModulesCurrentModulefile]
+
+# Construct path to tecplot bin dir
+module add tecplot/2017r2
+set tecplot_bin [file dirname [auto_execok tec360]]
+module rm tecplot/2017r2
+
+# Configure the pytecplot envrionment
+# NOTE: TECHOME variable should be set by the tecplot module
+setenv        PYTECPLOT_HOME     ${root}
+prepend-path  PYTHONPATH         ${root}
+append-path   LD_LIBRARY_PATH    ${tecplot_bin}
+append-path   LD_LIBRARY_PATH    ${tecplot_bin}/sys
