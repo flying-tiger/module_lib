@@ -1,7 +1,6 @@
 namespace eval ::mod_utils {
     namespace export get_tool_path
-    variable util_root [file normalize [file dirname [info script]]]
-    variable tool_root [file normalize $util_root/../../]
+    variable tool_root $::env(MODULE_LIB_SOFTWARE)
 }
 
 proc ::mod_utils::get_tool_path {mfile} {
@@ -10,7 +9,7 @@ proc ::mod_utils::get_tool_path {mfile} {
     variable tool_name [lrange [file split $mfile] end-1 end]
     variable tool_path [file join $mod_utils::tool_root {*}$tool_name]
     if ![file isdirectory $tool_path] {
-        puts stderr "Error: $tool_name is not installed in \$HOME/tools"
+        puts stderr "Error: $tool_name not installed in \$MODULE_LIB_SOFTWARE"
         break
     }
     return $tool_path

@@ -1,9 +1,0 @@
-#%Module1.0
-module-whatis Bootstrap environment for module_lib
-
-# Figure out where module_lib is located
-set root [file dirname  $ModulesCurrentModulefile]
-
-# Configure the environment
-setenv MODULE_LIB_ROOT $root
-setenv TCLLIBPATH      $root/__tcllib

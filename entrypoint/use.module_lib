@@ -1,0 +1,14 @@
+#%Module1.0
+module-whatis Add module_lib software to the envrionment
+
+# Figure out where module_lib is located
+set root [file dirname [file dirname  $ModulesCurrentModulefile]]
+set root [file normalize $root]
+
+# Configure the environment variables
+setenv MODULE_LIB_ROOT      $root
+setenv MODULE_LIB_SOFTWARE  $root/software
+setenv TCLLIBPATH           $root/tclutil
+
+# Make modulefile tree visible
+module use $root/modulefiles
