@@ -1,7 +1,6 @@
 #%Module1.0
-module-whatis "Adds Gnuplot v5.0.5 to the environment"
+module-whatis "Adds Gnuplot to the environment"
 
-prereq   use.module_lib
 conflict gnuplot
 
 package require mod_utils 1.0

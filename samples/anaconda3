@@ -1,10 +1,12 @@
 #%Module1.0
-module-whatis "Adds Anaconda3 v4.3.1 to the environment"
+module-whatis "Adds Anaconda3 to the environment"
 
-prereq   use.module_lib
 conflict anaconda
 conflict anaconda2
 conflict anaconda3
+conflict miniconda
+conflict miniconda2
+conflict miniconda3
 
 package require mod_utils 1.0
 set root [mod_utils::get_tool_path $ModulesCurrentModulefile]

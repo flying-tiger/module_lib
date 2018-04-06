@@ -1,7 +1,6 @@
 #%Module1.0
-module-whatis "Adds Julia v0.6.0 to the environment"
+module-whatis "Adds Julia to the environment"
 
-prereq   use.module_lib
 conflict julia
 
 package require mod_utils 1.0

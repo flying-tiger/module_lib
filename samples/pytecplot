@@ -1,5 +1,5 @@
 #%Module
-module-whatis "Add pytecplot v0.8.2 to the environment"
+module-whatis "Add pytecplot to the environment"
 
 prereq   use.module_lib
 conflict pytecplot
@@ -21,5 +21,5 @@ if { ${tecplot_exe} eq "" } {
 # NOTE: TECHOME variable should be set by the tecplot module
 setenv        PYTECPLOT_HOME     ${root}
 prepend-path  PYTHONPATH         ${root}
-append-path   LD_LIBRARY_PATH    ${tecplot_bin}
-append-path   LD_LIBRARY_PATH    ${tecplot_bin}/sys
+prepend-path  LD_LIBRARY_PATH    ${tecplot_bin}
+prepend-path  LD_LIBRARY_PATH    ${tecplot_bin}/sys
