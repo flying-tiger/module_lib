@@ -9,7 +9,7 @@ proc ::mod_utils::get_tool_path {mfile} {
     variable tool_name [lrange [file split $mfile] end-1 end]
     variable tool_path [file join $mod_utils::tool_root {*}$tool_name]
     if ![file isdirectory $tool_path] {
-        puts stderr "Error: $tool_name not installed in \$MODULE_LIB_SOFTWARE"
+        puts stderr "Error: $tool_name not installed in \$MODULE_LIB_SOFTWARE:\n$mod_utils::tool_root"
         break
     }
     return $tool_path
