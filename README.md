@@ -1,6 +1,10 @@
 # module_lib
 A library of generic modulefiles for software I use
 
+> WARNGING
+> The development branch is undergoing a major re-organiztion and the documention
+> hasn't caught up yet! You have been warned.
+
 ## Summary
 Since I work in HPC, [Environment Modules](http://modules.sourceforge.net/) are
 my preferred method for managing tools. I try to keep a clean base environment
